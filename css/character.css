@@ -1,0 +1,140 @@
+/* --- CHARACTER PAGE STYLE --- */
+
+/* Container Halaman Utama */
+#character.page-content {
+    min-height: 100vh; 
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    
+    padding: 40px;
+    
+    /* REVISI: HAPUS PADDING-TOP AGAR MEPET ATAS */
+    padding-top: 0; 
+}
+
+/* Container untuk setiap Kartu Karakter */
+.character-card {
+    width: 22%; 
+    text-align: center;
+    cursor: pointer;
+    
+    /* REVISI: MENARIK KARTU SEDIKIT KE ATAS */
+    margin-top: 0; 
+    
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Background Gambar Karakter */
+.card-image {
+    width: 100%;
+    height: 400px;
+    
+    background-color: var(--color-figma-red);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+    
+    transition: border 0.3s ease;
+    
+    margin-top: 0; 
+}
+
+/* Efek Hover pada Border Gambar */
+.character-card:hover .card-image {
+    border: 3px solid var(--color-text-light);
+}
+
+/* Gambar Karakter di dalam Kartu */
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.character-card:hover .card-image img {
+    opacity: 1;
+}
+
+/* Bagian Informasi (Nama & Deskripsi) */
+.card-info {
+    /* Posisi & Layout */
+    margin-top: -15px; /* Overlap sedikit dengan gambar */
+    padding: 30px 15px 15px 15px; /* Padding atas lebih besar */
+    
+    min-height: 150px;
+    text-align: left;
+    
+    /* Styling Visual */
+    background-color: #111;
+    border-radius: 10px;
+    
+    /* Efek Animasi Hover (Mulai: Tersembunyi & Turun) */
+    transform: translateY(20px); 
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+    position: relative; 
+    z-index: 2; 
+}
+
+/* Efek Hover pada Info Card (Akhir: Muncul & Naik) */
+.character-card:hover .card-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Teks Judul dalam Info */
+.card-info h3 {
+    color: var(--color-figma-red);
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.card-info p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+/* --- Media Queries (Responsif Mobile) --- */
+@media (max-width: 900px) {
+    #character.page-content {
+        flex-wrap: wrap; /* Bungkus kartu ke baris baru */
+        padding: 20px;
+        align-items: center; /* Pusatkan di mobile */
+    }
+
+    .character-card {
+        width: 48%; /* 2 Kartu per baris */
+        margin-top: 80px; /* Jarak dari header di mobile */
+        margin-bottom: 20px;
+    }
+    
+    /* Di Mobile, info card selalu terlihat (opsional) */
+    .card-info {
+        opacity: 1; 
+        transform: translateY(0);
+        min-height: auto;
+    }
+    
+    .card-image {
+        height: 300px; /* Gambar lebih pendek di mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .character-card {
+        width: 100%; /* 1 Kartu per baris di layar sangat kecil */
+    }
+}

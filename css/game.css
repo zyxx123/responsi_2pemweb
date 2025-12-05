@@ -1,0 +1,79 @@
+#game.page-content {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background: var(--color-figma-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.game-title-area h1 {
+    font-size: 6vw;
+    line-height: 1;
+    color: var(--color-text-light);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.game-image-rdr2 {
+    width: 50%;
+    height: 600px;
+    background: url('placeholder-arthur.png') no-repeat center right; 
+    background-size: cover;
+}
+
+.platform-links {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.platform-links img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.2s;
+}
+
+.platform-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query Responsif */
+@media (max-width: 768px) {
+    .game-info {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 20px;
+    }
+    .game-title-area {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .game-image-rdr2 {
+        width: 100%;
+        height: 300px;
+        background-position: center bottom;
+    }
+    .platform-links {
+        position: static;
+        margin-top: 30px;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+}
