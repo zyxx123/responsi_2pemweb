@@ -17,7 +17,7 @@
 /* Scrollbar Kustom */
 #character.page-content::-webkit-scrollbar { width: 8px; }
 #character.page-content::-webkit-scrollbar-track { background: #000; }
-#character.page-content::-webkit-scrollbar-thumb { background: var(--color-background); border-radius: 4px; }
+#character.page-content::-webkit-scrollbar-thumb { background: var(--color-figma-red); border-radius: 4px; }
 
 /* --- Container Kartu --- */
 .character-card {
@@ -26,7 +26,7 @@
     cursor: pointer;
     position: relative;
     overflow: visible;
-    margin-bottom: 180px; /* Ruang untuk card-info saat geser bawah */
+    margin-bottom: 220px; /* Tambah margin untuk ruang card-info */
     transition: transform 0.3s ease;
 }
 
@@ -76,14 +76,12 @@
 
 /* --- CARD INFO SEBAGAI BAYANGAN ABU-ABU (LAYER BELAKANG) --- */
 .card-info {
-    /* DESAIN: Warna abu-abu gelap seperti bayangan - TETAP SAMA */
+    /* DESAIN: Warna abu-abu gelap seperti bayangan */
     background-color: #3c3c3c;
     border-radius: 70px;
-    
-    /* MODIFIKASI: Tambah padding atas agar ada ruang untuk teks di bawah */
     padding: 0;
     
-    /* UKURAN: Sama dengan card-image - TETAP SAMA */
+    /* UKURAN: Sama dengan card-image */
     width: 280px;
     height: 400px;
     
@@ -102,7 +100,7 @@
     color: #fff;
     overflow: hidden;
     
-    /* MODIFIKASI: Flexbox untuk posisi teks di bawah */
+    /* Flexbox untuk posisi teks di bawah */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -124,15 +122,13 @@
     padding-bottom: 20px;
 }
 
-/* --- SAAT DIKLIK: Card-info GESER KE BAWAH (Bentuk & Warna TETAP SAMA) --- */
+/* --- SAAT DIKLIK: Card-info GESER KE BAWAH LEBIH JAUH --- */
 .character-card.active .card-info {
-    /* HANYA GESER KE BAWAH - Bentuk dan warna TETAP */
-    top: 150px; /* Geser ke bawah dari posisi awal (8px → 150px) */
+    /* GESER KE BAWAH LEBIH BANYAK - Teks akan terlihat semua */
+    top: 200px; /* Diturunkan dari 150px ke 250px */
     
     /* left tetap 8px untuk mempertahankan efek bayangan samping */
     left: 8px;
-    
-    /* TIDAK ADA perubahan warna, height, border - TETAP ABU-ABU */
 }
 
 /* Tampilkan teks saat aktif */
@@ -144,11 +140,11 @@
 
 /* Styling teks */
 .card-info h3 {
-    color: #fff; /* Putih agar kontras dengan background abu-abu */
+    color: #fff;
     font-size: 1.5em;
     margin-bottom: 10px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow agar terbaca */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card-info p {
@@ -169,7 +165,7 @@
     .character-card {
         width: 100%;
         max-width: 320px;
-        margin-bottom: 200px;
+        margin-bottom: 250px; /* Tambah margin untuk mobile */
     }
     
     .card-info {
@@ -177,6 +173,6 @@
     }
     
     .character-card.active .card-info {
-        top: 160px;
+        top: 260px; /* Turun lebih banyak di mobile */
     }
 }

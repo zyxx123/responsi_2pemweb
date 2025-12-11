@@ -18,24 +18,26 @@
 body {
     background-color: var(--color-background);
     color: var(--color-text-light);
-    font-family: 'Chinese Rock', sans-serif; 
+    font-family: 'Rye', serif;
     min-height: 100vh;
     overflow: hidden; 
 }
 
 /* Font Styling */
 p {
-    font-family: 'Chinese Rock', sans-serif; 
+    font-family: 'Rye', serif; 
     font-weight: 400; 
     font-size: 14px;
 }
+
 nav ul li a, 
 .character-tabs, 
 .char-content h1, 
 .about-right h2, 
 .card-info h3, 
-.game-title-area h1 {
-    font-family: 'Chinese Rock', sans-serif; 
+.game-title-area h1,
+.game-title-area h2 {
+    font-family: 'Rye', serif; 
 }
 
 /* --- Header & Navigasi Utama --- */
@@ -98,7 +100,7 @@ main {
     padding-top: 0; 
     padding-bottom: 0;
     
-    /* ANIMASI KUNCI: Transisi smooth untuk opacity dan transform */
+    /* Transisi smooth */
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
@@ -130,13 +132,13 @@ main {
     left: 0;
     z-index: 1; 
     
-    background-image: url('READ DEAD REDEMPTION.png'); 
+    background-image: url('../media/READ DEAD REDEMPTION.png'); 
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover; 
 }
 
-/* --- Media Query untuk Resolusi Desktop Standar (1366px) --- */
+/* --- Media Query --- */
 @media (min-width: 1025px) and (max-width: 1366px) {
     nav ul li {
         margin-left: 20px;
