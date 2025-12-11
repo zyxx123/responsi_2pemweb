@@ -17,7 +17,7 @@
 /* Scrollbar Kustom */
 #character.page-content::-webkit-scrollbar { width: 8px; }
 #character.page-content::-webkit-scrollbar-track { background: #000; }
-#character.page-content::-webkit-scrollbar-thumb { background: var(--color-figma-red); border-radius: 4px; }
+#character.page-content::-webkit-scrollbar-thumb { background: var(--color-background); border-radius: 4px; }
 
 /* --- Container Kartu --- */
 .character-card {
