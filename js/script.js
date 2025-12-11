@@ -42,14 +42,14 @@ const pageContent = {
                 <div class="card-image"><img src="../media/Micah.png" alt="Micah Bell"></div>
                 <div class="card-info">
                     <h3>THE RAT</h3>
-                    <p>He was just an ordinary member of the Van Der Linde gang, but with his intelligence in manipulating people, he managed to secure Dutch's.</p>
+                    <p>He was just an ordinary member of the Van der Linde gang, but with his intelligence in manipulating people, he managed to become Dutch's confidant.</p>
                 </div>
             </div>
             <div class="character-card">
                 <div class="card-image"><img src="../media/john.webp" alt="John Marston"></div>
                 <div class="card-info">
                     <h3>THE LAST</h3>
-                    <p>Unlike Arthur, who has become Dutch's right-hand man, John is often looked down upon by the other gang members because of his stubborn.</p>
+                    <p>Unlike Arthur, who has become Dutch's right-hand man, John is often looked down upon by the other gang members because of his stubborn nature and often acting alone.</p>
                 </div>
             </div>
         </div>
